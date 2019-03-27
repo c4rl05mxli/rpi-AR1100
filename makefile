@@ -7,7 +7,7 @@ LINK=-L/usr/lib -L/usr/local/lib -lpthread `pkg-config --libs libusb-1.0` `pkg-c
 #compiler command
 CXX=g++ 
 #compiler flags
-CXXFLAGS = -DAPP_VERSION="1.0" $(INCL)
+CXXFLAGS = -DAPP_VERSION="1.1" $(INCL)
 
 #debugging or not (make DEBUG=1)
 ifeq (1,$(DEBUG))
@@ -25,7 +25,7 @@ all: $(APPNAME)
 
 # link
 $(APPNAME): $(OBJS)
-	$(CXX) $(CXXFLAGS) $(LINK) $(OBJS) -o $(APPNAME)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(APPNAME) $(LINK)
 
 # pull in dependency info for *existing* .o files
 -include $(OBJS:.o=.d)
