@@ -1,7 +1,7 @@
 #ifndef AR1100_CLASS_H
 	#define AR1100_CLASS_H
     
-	#include <libusb-1.0/libusb.h>
+	#include "libusb.h"
     
     #define AR1100_MODE_GENERIC 1
     #define AR1100_MODE_MOUSE 2
