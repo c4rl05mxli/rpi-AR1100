@@ -3,7 +3,7 @@ APPNAME=AR1100
 #include dirs
 INCL= `pkg-config --cflags libusb-1.0`
 #add link libs here and link dirs 
-LINK=-L/usr/lib -L/usr/local/lib -lpthread `pkg-config --libs libusb-1.0`
+LINK=-L/usr/lib -L/usr/local/lib -L/lib -lpthread `pkg-config --libs libusb-1.0`
 #compiler command
 CXX=g++ 
 #compiler flags
